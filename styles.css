@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  padding: 4rem;
+}
+
+.fixed-wrap h1 {
+  position: fixed;
+}
+
+.fixed-wrap #navbar header {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  /* GPT */
+  position: fixed;
+  top: 4rem;
+  left: 4rem;
+  height: 100%;
+  overflow-y: auto; /* Add vertical scroll if needed */
+}
+
+.fixed-wrap #navbar header a {
+  margin-top: 1.5rem;
+  padding: 5px;
+  font-size: 1.6rem;
+}
+
+.fixed-wrap #navbar a:hover {
+  background-color: rgba(184, 184, 241, 0.3);
+  border-radius: 3px;
+}
+
+.fixed-wrap h1,
+.main-section header {
+  font-size: 2.8rem;
+}
+
+.fixed-wrap #line {
+  border: 0.5px solid rgba(164, 164, 170, 0.973);
+  margin-left: 3rem;
+  /* GPT */
+  position: fixed;
+  top: 2rem;
+  bottom: 2rem;
+  left: 24rem; /* Adjust left position to match the width of the navbar */
+}
+
+#main-doc {
+  margin-left: 26rem;
+}
+
+.main-section {
+  margin-left: 2.6rem;
+  padding: 0 2rem;
+}
+
+.main-section:not(:first-child) {
+  margin-top: 6rem;
+}
+
+.main-section p {
+  margin: 1.6rem 0 1.6rem 1.6rem;
+  font-size: 1.6rem;
+}
+
+.main-section ul {
+  margin-left: 4.6rem;
+}
+
+.main-section ul li {
+  font-size: 1.6rem;
+  margin: 5px 0;
+}
+
+.main-section .code {
+  font-size: 1.4rem;
+  margin: 0 0 1.5rem 4rem;
+  padding: 1.5rem;
+  background-color: rgba(214, 207, 207, 0.2);
+  border-radius: 5px;
+  width: 85%;
+  font-family: monospace;
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .fixed-wrap {
+    padding: 2rem 4rem;
+    position: fixed;
+    height: 32rem;
+    background-color: white;
+    z-index: 1;
+
+    /* GPT */
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+  }
+
+  .fixed-wrap h1 {
+    position: fixed;
+  }
+
+  .fixed-wrap #navbar header {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem -3rem 3rem;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .fixed-wrap #navbar a {
+    text-align: center;
+    margin: 1.5rem auto 0;
+  }
+
+  .fixed-wrap #navbar a:hover {
+    background-color: rgba(184, 184, 241, 0.3);
+    border-radius: 3px;
+  }
+
+  .fixed-wrap #line {
+    border: 0.5px solid rgba(164, 164, 170, 0.973);
+    height: 1px;
+    max-width: 100%;
+    margin: 0 auto;
+    top: 31rem;
+    left: 2rem;
+    right: 2rem;
+  }
+
+  #main-doc {
+    width: 100%;
+    margin: 0;
+  }
+  .main-section {
+    margin: 26rem 0 0 2rem;
+    padding: 4rem 0 1rem;
+  }
+}
